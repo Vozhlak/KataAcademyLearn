@@ -1,0 +1,146 @@
+@media (min-width: 510px) {
+  .header__btn-menu::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    border-radius: 1rem;
+    transform: translateY(-50%);
+    position: absolute;
+    right: -20px;
+    top: 50%;
+  }
+  .header__logo {
+    margin-left: 40px;
+  }
+  .header__contact {
+    display: flex;
+    gap: 16px;
+    padding-right: 20px;
+  }
+  .about-us__description {
+    padding: 0 16px;
+  }
+  .about-us__img {
+    margin: 0 16px;
+    border-radius: 6px;
+    max-width: 531px;
+  }
+}
+@media (min-width: 768px) {
+  .header__container {
+    padding: 0 24px;
+  }
+  .about-us__title {
+    padding-left: 24px;
+  }
+  .about-us__head {
+    margin-bottom: 32px;
+  }
+  .nav {
+    padding-left: 24px;
+  }
+  .about-us__description {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 48px;
+  }
+  .wrap {
+    min-width: 360px;
+  }
+  .wrap__description-text {
+    padding: 0 24px;
+    height: 160px;
+  }
+  .about-us__link-read-more {
+    margin-left: 33px;
+  }
+  .menu__container {
+    padding: 0 24px;
+  }
+  .menu__header {
+    margin-bottom: 46px;
+  }
+  .nav-link--active::before {
+    content: "";
+    transform: translateX(-24px) translateY(-15%);
+  }
+  .wrap-contact {
+    margin-top: 100px;
+  }
+}
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+  .main__wrap {
+    padding-left: 320px;
+  }
+  .about-us__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding-top: 42px;
+  }
+  .about-us__title {
+    padding-left: 32px;
+  }
+  .wrap-btns {
+    display: flex;
+    padding-right: 32px;
+  }
+  .nav__btn {
+    display: flex;
+    border: none;
+    gap: 32px;
+  }
+  .nav__btn-label {
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav {
+    padding-left: 32px;
+  }
+  .nav__list {
+    flex-wrap: wrap;
+    overflow-y: hidden;
+  }
+  .about-us__description {
+    gap: 36px;
+  }
+  .wrap {
+    max-width: 490px;
+  }
+  .wrap__description-text {
+    padding: 0 32px;
+    height: auto;
+  }
+  .about-us__link-read-more {
+    margin-left: 40px;
+  }
+  .about-us__img {
+    margin: 0;
+  }
+  .wrapper-menu {
+    display: block;
+    background: none;
+    width: 0;
+    height: 0;
+  }
+  .menu {
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .menu__header-logo {
+    margin-left: 0;
+  }
+  .menu__header-btn {
+    display: none;
+  }
+}/*# sourceMappingURL=media.css.map */
