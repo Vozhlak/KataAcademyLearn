@@ -1,24 +1,5 @@
 @media (min-width: 510px) {
-  .header__btn-menu::after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: 32px;
-    background-color: #EAEAEA;
-    border-radius: 1rem;
-    transform: translateY(-50%);
-    position: absolute;
-    right: -20px;
-    top: 50%;
-  }
-  .header__logo {
-    margin-left: 40px;
-  }
-  .header__contact {
-    display: flex;
-    gap: 16px;
-    padding-right: 20px;
-  }
+  
   .about-us__description {
     padding: 0 16px;
   }
@@ -29,9 +10,6 @@
   }
 }
 @media (min-width: 768px) {
-  .header__container {
-    padding: 0 24px;
-  }
   .about-us__title {
     padding-left: 24px;
   }
@@ -56,24 +34,8 @@
   .about-us__link-read-more {
     margin-left: 33px;
   }
-  .menu__container {
-    padding: 0 24px;
-  }
-  .menu__header {
-    margin-bottom: 46px;
-  }
-  .nav-link--active::before {
-    content: "";
-    transform: translateX(-24px) translateY(-15%);
-  }
-  .wrap-contact {
-    margin-top: 100px;
-  }
 }
 @media (min-width: 1120px) {
-  .header {
-    display: none;
-  }
   .about-us__head {
     display: flex;
     align-items: center;
@@ -123,21 +85,5 @@
   }
   .about-us__img {
     margin: 0;
-  }
-  .wrapper-menu {
-    display: block;
-    background: none;
-    width: 0;
-    height: 0;
-  }
-  .menu {
-    box-shadow: none;
-    overflow: hidden;
-  }
-  .menu__header-logo {
-    margin-left: 0;
-  }
-  .menu__header-btn {
-    display: none;
   }
 }/*# sourceMappingURL=media.css.map */

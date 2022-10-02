@@ -1,0 +1,18 @@
+.link-read-more {
+  color: #1B1C21;
+  font-size: 16px;
+  font-family: "TTLakes-Medium";
+  font-weight: 500;
+  text-decoration: none;
+}
+.link-read-more::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../images/two-arrow-down-icon.svg") no-repeat left bottom;
+}
+.link-read-more:hover, .link-read-more:focus {
+  color: #7E7E82;
+  transition: color 0.4s ease;
+}

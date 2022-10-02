@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/media.css">
   <link rel="stylesheet" href="./css/normalize.css">
   <title>Товары и услуги</title>
 </head>
@@ -15,11 +14,11 @@
       <div class="menu__container">
         <div class="menu__header">
           <button class="btn menu__header-btn menu__header-btn--close-menu"></button>
-          <img src="./images/logo.svg" alt="logo" class="menu__header-logo">
+          <img src="./images/logo.svg" alt="logo" class="logo menu__logo">
           <button class="btn menu__header-btn--search"></button>
         </div>
-        <nav class="menu__nav">
-          <ul class="menu__nav-list">
+        <nav class="menu-nav">
+          <ul class="menu-nav__list">
             <li class="list-item"><a href="#" class="nav-link">Ремонт техники</a></li>
             <li class="list-item"><a class="nav-link nav-link--active" href="#">Услуги и сервисы</a></li>
             <li class="list-item"><a class="nav-link" href="#">Корпоративным клиентам</a></li>
@@ -31,21 +30,21 @@
           </ul>
         </nav>
         <div class="wrap-contact">
-          <ul class="menu__contact">
-            <li class="contact-item">
-              <button class="btn btn--profile"></button>
-            </li>
+          <ul class="contact menu__contact">
             <li class="contact-item">
               <button class="btn btn--phone"></button>
             </li>
             <li class="contact-item">
               <button class="btn btn--chat"></button>
             </li>
+            <li class="contact-item">
+              <button class="btn btn--profile"></button>
+            </li>
           </ul>
-          <div class="info-contact">
+          <address class="info-contact">
             <a class="email" href="mailto:mail@cps.com">mail@cps.com</a>
             <a class="phone" href="tel: 88008908900">8 800 890 8900</a>
-          </div>
+          </address>
           <ul class="swith-lang">
             <li class="lang-item"><a class="lang-link lang-link--acitve" href="#">RU</a></li>
             <li class="lang-item"><a class="lang-link" href="#">EN</a></li>

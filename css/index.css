@@ -1,2 +1,9 @@
-@import 'styles.css';
-@import 'menu.css';
+@import './fonts.css';
+@import './main-styles.css';
+@import './header.css';
+@import './btn.css';
+@import './title.css';
+@import './main-nav.css';
+@import './about-us.css';
+@import './link-read-more.css';
+@import './menu.css';
