@@ -10,7 +10,7 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url("../images/two-arrow-down-icon.svg") no-repeat left bottom;
+  background: url("../../images/two-arrow-down-icon.svg") no-repeat left bottom;
 }
 .link-read-more:hover, .link-read-more:focus {
   color: #7E7E82;

@@ -1,18 +1,3 @@
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 16,
-  enabled: true,
-  pagination: {
-      el: '.swiper-pagination',
-      clickable:true,
-    },
-    breakpoints: {
-      768: {
-        enabled: false
-      }
-    }
-});
-
 const btn = document.querySelector('.brands__btn-show-all');
 const block = document.querySelector('.brands__gallery');
 let textBtn = btn.innerHTML;
@@ -31,4 +16,3 @@ btn.addEventListener('click', function(evt) {
     btn.innerHTML = textBtn;
   }
 })
-

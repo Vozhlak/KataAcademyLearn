@@ -11,7 +11,7 @@
   display: none;
 }
 
-.swiper-wrapper {
+.brands__wrapper {
   padding-bottom: 44px;
   padding-top: 1px;
 }
@@ -56,10 +56,11 @@
     margin-bottom: 24px;
   }
 
-  .brands-wrapper {
+  .brands__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, 224px);
     gap: 16px 24px;
+    padding-bottom: 16px;
   }
   
   .brands__gallery--open {
@@ -84,7 +85,7 @@
     padding-left: 32px;
   }
 
-  .brands-wrapper {
+  .brands__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, 240px);
     gap: 16px 32px;

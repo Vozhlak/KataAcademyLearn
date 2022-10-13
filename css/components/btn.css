@@ -9,19 +9,19 @@
   cursor: pointer;
 }
 .btn--repair {
-  background-image: url("../images/tools-ico.svg");
+  background-image: url("../../images/tools-ico.svg");
 }
 .btn--check-status {
-  background-image: url("../images/checkstatus-ico.svg");
+  background-image: url("../../images/checkstatus-ico.svg");
 }
 .btn--phone {
-  background-image: url("../images/phone-ico.svg");
+  background-image: url("../../images/phone-ico.svg");
 }
 .btn--chat {
-  background-image: url("../images/chat-ico.svg");
+  background-image: url("../../images/chat-ico.svg");
 }
 .btn--profile {
-  background-image: url("../images/profile-ico.svg");
+  background-image: url("../../images/profile-ico.svg");
 }
 .btn:hover, .btn:focus {
   opacity: 0.7;

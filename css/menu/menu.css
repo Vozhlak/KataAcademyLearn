@@ -41,7 +41,7 @@
   left: 30%;
   width: 16px;
   height: 16px;
-  background: url("../images/close-menu-ico.svg") no-repeat center/cover;
+  background: url("../../images/close-menu-ico.svg") no-repeat center/cover;
   transform: translateY(-50%);
 }
 .menu__header-btn--search {
@@ -55,7 +55,7 @@
   left: 30%;
   width: 17px;
   height: 17px;
-  background: url("../images/search-ico.svg") no-repeat center/cover;
+  background: url("../../images/search-ico.svg") no-repeat center/cover;
   transform: translateY(-50%);
 }
 .menu-nav__list {
