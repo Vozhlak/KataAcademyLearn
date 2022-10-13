@@ -1,0 +1,32 @@
+.brand-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  background-color: #FFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  padding: 0 16px;
+  width: 240px;
+  
+}
+
+.brand-card:hover,
+.brand-card:focus {
+  border-color: #FF3E79;
+  box-shadow: inset 0 0 3px #FF3E79;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .brand-card {
+    width: 224px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brand-card {
+    width: 240px;
+  }
+}

@@ -1,0 +1,26 @@
+.brand-card__link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: inherit;
+  border: 2px solid #FF3E79;
+  border-radius: 50%;
+}
+
+.brand-card__link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  width: 20px;
+  height: 20px;
+  background: url('../images/arrow-right.svg') no-repeat center;
+}
+
+/* .brand-card__link:hover,
+.brand-card__link:focus {
+  opacity: .6;
+  transition: all 1s ease;
+
+} */

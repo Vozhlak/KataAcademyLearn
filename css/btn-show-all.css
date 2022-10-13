@@ -1,0 +1,27 @@
+.btn-show-all {
+  color: #1B1C21;
+  font-size: 16px;
+  font-family: "TTLakes-Medium";
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  padding-left: 16px;
+  cursor: pointer;
+}
+
+.btn-show-all::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../images/two-arrow-down-icon.svg") no-repeat left bottom;
+}
+
+.btn-show-all--close::before {
+  background: url("../images/twoArrowTop-ico.svg") no-repeat bottom left;
+}
+
+.btn-show-all:hover, .btn-show-all:focus {
+  color: #7E7E82;
+  transition: color 0.4s ease;
+}

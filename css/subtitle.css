@@ -1,0 +1,11 @@
+.subtitle {
+  font-family: 'TTLakes-Regular', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7E7E82;
+  background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+  border-top: 1px solid #D9FFF5;
+}
