@@ -1,0 +1,86 @@
+.header {
+  background-color: #FFF;
+  box-shadow: 0 1px 0 #d9fff5;
+
+  @media (min-width: 1120px) {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    min-height: 88px;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      padding: 0 24px;
+    }
+  }
+
+  &__logo {
+    max-width: 96px;
+    margin-left: 16px;
+
+    @media (min-width: 510px) {
+      margin-left: 40px;
+    }
+  }
+
+  &__btn-menu {
+    position: relative;
+    &::after {
+      content: "";
+      @media (min-width: 510px) {
+        display: block;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1rem;
+        transform: translateY(-50%);
+        position: absolute;
+        right: -20px;
+        top: 50%;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__contact {
+    display: none;
+
+    @media (min-width: 510px) {
+      display: flex;
+      gap: 16px;
+      padding-right: 20px;
+    }
+  }
+
+  &__repair {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 32px;
+      background-color: #EAEAEA;
+      border-radius: 1rem;
+      transform: translateY(-50%);
+      position: absolute;
+      left: 0;
+      top: 50%;
+    }
+  }
+}
+
+.btn--open-menu {
+  background-image: url("../images/menu-burger-ico.svg");
+}

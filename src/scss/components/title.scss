@@ -1,0 +1,29 @@
+.title {
+  margin: 0;
+  position: relative;
+  font-family: 'TTLakes-Bold', sans-serif;
+  font-size: 1.75rem;
+  line-height: 143%;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    border-radius: 0 1rem 1rem 0;
+
+    @media (min-width: 768px) {
+      left: -24px;
+    }
+
+    @media (min-width: 1120px) {
+      left: -32px;
+    } 
+  }
+}
+
+

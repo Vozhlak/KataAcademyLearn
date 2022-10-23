@@ -1,0 +1,27 @@
+.repairOfEquipment-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $secondary-background;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  padding: 16px;
+  width: 240px;
+  height: 100%;
+
+  &:hover,
+  &:focus {
+    border-color: #FF3E79;
+    box-shadow: inset 0 0 3px #FF3E79;
+    transition: all 0.5s ease;
+  }
+
+  @media (min-width: 768px) {
+    width: 224px;
+  }
+  
+  @media (min-width: 1120px) {
+    width: 240px;
+  }
+}
+
