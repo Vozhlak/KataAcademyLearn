@@ -1,0 +1,86 @@
+.repairOfEquipment {
+  &__wrapper {
+    padding-left: 16px;
+
+    @media (min-width: 768px) {
+      padding-left: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 1120px) {
+      padding-left: 32px;
+    }
+  }
+
+  &__title {
+    padding: 16px 0;
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__gallery {
+    &::after {
+      content: " ";
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      transform: translateY(-235px);
+      width: 24px;
+      height: 195px;
+      background-image: linear-gradient( 270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.0001) 100% );
+    }
+  }
+
+  &__list {
+    padding-bottom: 56px;
+    padding-top: 17px;
+    
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 224px);
+      gap: 48px 24px;
+      padding-bottom: 32px;
+      padding-top: 16px;
+      max-height: 155px;
+    }
+
+    &--open {
+      max-height: fit-content;
+    }
+
+    @media (min-width: 1120px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 240px);
+      gap: 48px 32px;
+      padding-top: 24px;
+    }
+  }
+
+  &__item {
+    width: 240px;
+    height: 160px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    position: absolute;
+    right: 16px;
+    bottom: 0;
+  }
+}
+
+.repairOfEquipment-card {
+  &__title {
+    font-family: 'TTLakes-Medium';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+}

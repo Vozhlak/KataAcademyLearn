@@ -1,0 +1,31 @@
+@import './normalize.scss';
+@import '../../node_modules/swiper/swiper-bundle.css';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
+@import './fonts.scss';
+@import './variables.scss';
+
+//Components
+@import './components/btn.scss';
+@import './components/title.scss';
+@import './components/subtitle.scss';
+@import './components/link-read-more.scss';
+@import './components/brand-card.scss';
+@import './components/round-button-link.scss';
+@import './components/btn-show-all.scss';
+@import './components/repairOfEquipment-card.scss';
+@import './components/price-list-card.scss';
+@import './components/wide-btn.scss';
+@import './components/pagination-bullets.scss';
+
+//Blocks
+@import './body/body.scss';
+@import './page-ordersAndServices/page-ordersAndServices.scss';
+@import './header/header.scss';
+@import './head-main/head-main.scss';
+@import './main-nav/main-nav.scss';
+@import './about-us/about-us.scss';
+@import './brands/brands.scss';
+@import './repairOfEquipment/repairOfEquipment.scss';
+@import './price-list/price-list.scss';
+@import './footer/footer.scss';
+@import './menu/menu.scss';

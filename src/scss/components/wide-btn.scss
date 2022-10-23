@@ -1,0 +1,27 @@
+.wide-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  border-radius: 16px;
+  border: 1px solid #FF3E79;
+  background-color: #FF3E79;
+  cursor: pointer;
+
+  font-family: 'TTLakes-Medium', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  padding: 4px 4px 4px 12px;
+
+  &:hover,
+  &:focus {
+    background-color: #FFFFFF;
+    border: 1px solid #FF3E79;
+    color: #FF3E79;
+  }
+}
