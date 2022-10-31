@@ -5,27 +5,26 @@
 @import './variables.scss';
 
 //Components
-@import './components/btn.scss';
-@import './components/title.scss';
-@import './components/subtitle.scss';
-@import './components/link-read-more.scss';
-@import './components/brand-card.scss';
-@import './components/round-button-link.scss';
-@import './components/btn-show-all.scss';
-@import './components/repairOfEquipment-card.scss';
-@import './components/price-list-card.scss';
-@import './components/wide-btn.scss';
-@import './components/pagination-bullets.scss';
-
-//Blocks
-@import './body/body.scss';
-@import './page-ordersAndServices/page-ordersAndServices.scss';
-@import './header/header.scss';
-@import './head-main/head-main.scss';
-@import './main-nav/main-nav.scss';
-@import './about-us/about-us.scss';
-@import './brands/brands.scss';
-@import './repairOfEquipment/repairOfEquipment.scss';
-@import './price-list/price-list.scss';
-@import './footer/footer.scss';
-@import './menu/menu.scss';
+@import './blocks/btn.scss';
+@import './blocks/title.scss';
+@import './blocks/subtitle.scss';
+@import './blocks/link-read-more.scss';
+@import './blocks/brand-card.scss';
+@import './blocks/round-button-link.scss';
+@import './blocks/btn-show-all.scss';
+@import './blocks/repair-of-equipment-card.scss';
+@import './blocks/price-list-card.scss';
+@import './blocks/wide-btn.scss';
+@import './blocks/pagination-bullets.scss';
+@import './blocks/modal.scss';
+@import './blocks/body.scss';
+@import './blocks/page-ordersAndServices.scss';
+@import './blocks/header.scss';
+@import './blocks/main-head.scss';
+@import './blocks/main-nav.scss';
+@import './blocks/about-us.scss';
+@import './blocks/brands.scss';
+@import './blocks/repair-of-equipment.scss';
+@import './blocks/price-list.scss';
+@import './blocks/footer.scss';
+@import './blocks/menu.scss';

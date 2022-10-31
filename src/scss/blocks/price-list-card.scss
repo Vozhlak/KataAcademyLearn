@@ -1,4 +1,4 @@
-.price-list-card {
+.prices-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
     }
   }
 
-  &__nameService-wrap, 
+  &__name-service-wrap, 
   &__cost-wrap, 
   &__term-wrap {
     display: flex;
@@ -61,11 +61,16 @@
     }
   }
 
-  &__term-wrap {
+  &__term-wrap,
+  &__name-service-value {
     margin-bottom: 0;
   }
 
-  &__nameService, 
+  &__name-service-value {
+    margin-top: 0;
+  }
+
+  &__name-service, 
   &__cost, 
   &__term {
     font-family: 'TTLakes-Medium', sans-serif;

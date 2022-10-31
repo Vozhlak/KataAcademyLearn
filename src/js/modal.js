@@ -1,66 +1,90 @@
-const btnOpenModalFeedBack = document.querySelectorAll('.btn--chat');
-const btnOpenModalOrderCall = document.querySelectorAll('.btn--phone');
-const btnCloseModal = document.querySelector('.modal__btn-close');
-const blur = document.querySelector('.blur');
-const body = document.querySelector('body');
-const modal = document.querySelector('.modal');
-const menu = document.querySelector('.menu');
-
-let titleModal = modal.querySelector('.modal__title');
-let inputName = modal.querySelector('.input-name');
-let inputEmail = modal.querySelector('.input-email');
-let inputTextArea = modal.querySelector('.input-textarea');
-
-btnOpenModalFeedBack.forEach(el => {
-  el.addEventListener('click', (e) => {
-    e.preventDefault();
-    blur.classList.add('blur-visible');
-    modal.open = true;
-    body.classList.add('body__modal-open');
-    titleModal.innerHTML = 'Обратная связь';
-    inputName.style = 'display: visible';
-    inputEmail.style = 'display: visible';
-    inputTextArea.style = 'display: visible';
-    if(menu.classList.contains('menu-open')) {
-      menu.classList.remove('menu-open');
-    }
-  })
-});
-
-btnOpenModalOrderCall.forEach(el => {
-  el.addEventListener('click', (e) => {
-    e.preventDefault();
-    blur.classList.add('blur-visible');
-    modal.open = true;
-    body.classList.add('body__modal-open');
-    titleModal.innerHTML = 'Заказать звонок';
-    inputName.style = 'display: none';
-    inputEmail.style = 'display: none';
-    inputTextArea.style = 'display: none';
-
-    if(menu.classList.contains('menu-open')) {
-      menu.classList.remove('menu-open');
-    }
-  })
-});
-
-btnCloseModal.addEventListener('click', () => {
-  blur.classList.remove('blur-visible');
-  modal.open = false;
-  body.classList.remove('body__modal-open');
-});
-
-blur.addEventListener('click', () => {
-  blur.classList.remove('blur-visible');
-  modal.open = false;
-  body.classList.remove('body__modal-open');
-});
-
-document.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape') {
-    modal.open = false;
-    blur.classList.remove('blur-visible');
-    body.classList.remove('body__modal-open');
+export const toggleVisibleModal = () => {
+  const listBtnNodeModal = {
+    btnOpenModalFeedBack: 'btn--chat',
+    btnOpenModalOrderCall: 'btn--phone',
+    btnCloseModal: 'modal__btn-close'
   }
-})
+  
+  const isVisibleModal = (btnNode) => {
+    const objectsModal = {
+      blur: 'blur-visible',
+      body: 'body__modal-open',
+    };
+
+    const allBtnNode = document.querySelectorAll(`.${btnNode}`);
+    const modals = document.querySelectorAll('.modal');
+    const menu = document.querySelector('.menu');
+    const blur = document.querySelector('.blur');
+    if (allBtnNode !== null) {
+      for (let key in objectsModal) {
+        let elModal = document.querySelector(`.${key}`);
+        if (elModal !== null) {
+          allBtnNode.forEach(btnNode => {
+            btnNode.addEventListener('click', () => {
+              menu.classList.remove('menu-open');
+              if (btnNode.classList.contains('btn--chat')) {
+                modalVisible(`modal--feed-back`, true);
+                elModal.classList.add(`${objectsModal[key]}`);
+              } else if (btnNode.classList.contains('btn--phone')) {
+                modalVisible(`modal--order-call`, true);
+                elModal.classList.add(`${objectsModal[key]}`);
+              }
+              if (blur.classList.contains('blur-visible')) {
+                blur.addEventListener('click', () => {
+                  blur.classList.remove('blur-visible');
+                  modals.forEach(modal => {
+                    if (modal.classList.contains('modal--feed-back')) {
+                      modalVisible('modal--feed-back', false);
+                    } else if (modal.classList.contains('modal--order-call')) {
+                      modalVisible('modal--order-call', false);
+                    }
+                  })
+                })
+              }
+              if (btnNode.classList.contains('modal__btn-close')) {
+                modals.forEach(modal => {
+                  if (modal.classList.contains('modal--feed-back')) {
+                    modalVisible('modal--feed-back', false);
+                  } else if (modal.classList.contains('modal--order-call')) {
+                    modalVisible('modal--order-call', false);
+                  }
+                })
+                elModal.classList.remove(`${objectsModal[key]}`);
+              } 
+            })
+            document.addEventListener('keydown', (e) => {
+              if (e.key === 'Escape') {
+                modals.forEach(modal => {
+                  if (modal.classList.contains('modal--feed-back')) {
+                    modalVisible('modal--feed-back', false);
+                  } else if (modal.classList.contains('modal--order-call')) {
+                    modalVisible('modal--order-call', false);
+                  }
+                })
+                elModal.classList.remove(`${objectsModal[key]}`);
+              }
+            })
+          })
+        }
+      }
+    }
+  }
+
+  const modalVisible = (className, mode) => {
+    const modals = document.querySelectorAll('.modal');
+    if(modals !== null) {
+      modals.forEach(modal => {
+        if(modal.classList.contains(className)) {
+          modal.open = mode;
+          const inputs = modal.querySelectorAll('.form__input');
+          inputs[0].focus();
+        }
+      })
+    }
+  }
+
+  for(let key in listBtnNodeModal) {
+    isVisibleModal(listBtnNodeModal[key]);
+  }
+}
 

@@ -17,7 +17,8 @@
   }
   
   &--close::before {
-    background: url("../images/twoArrowTop-ico.svg") no-repeat bottom left;
+    transform: rotate(-180deg);
+    background-position: right top;
   }
   
   &:hover,

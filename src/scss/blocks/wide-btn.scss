@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-  height: 24px;
+  height: 32px;
   border-radius: 16px;
   border: 1px solid #FF3E79;
   background-color: #FF3E79;
@@ -16,12 +16,23 @@
   text-transform: uppercase;
   color: #FFFFFF;
 
-  padding: 4px 4px 4px 12px;
+  padding: 4px 16px 4px 12px;
+
+  &::after {
+    content: '';
+    width: 7px;
+    height: 10px;
+    background: url('../images/whiteArrowRight.svg') no-repeat center right;
+  }
 
   &:hover,
   &:focus {
+    background-image: url('../images/arrow-right.svg');
+    background-repeat: no-repeat;
+    background-position: 96px;
     background-color: #FFFFFF;
     border: 1px solid #FF3E79;
     color: #FF3E79;
+    transition: background-color .5s;
   }
 }

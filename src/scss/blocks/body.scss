@@ -1,0 +1,29 @@
+.body {
+  min-width: 320px;
+  font-family: 'TTLakes-Regular', sans-serif;
+  font-weight: 400;
+  background-color: $main-background;
+
+  .body__wrapper {
+    margin-left: 0;
+    @media (min-width: 1120px) {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+    
+    @media (min-width: 1366px) {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+  }
+
+  &__modal-open {
+    overflow: hidden;
+  }
+}
+
+.ul-def  {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

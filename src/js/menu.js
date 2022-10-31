@@ -1,28 +1,52 @@
-const body = document.querySelector('body');
-const btnOpenMenu = document.querySelector('.header__btn-menu');
-const btnCloseMenu = document.querySelector('.menu__header-btn--close-menu');
-const menu = document.querySelector('.menu');
-const blur = document.querySelector('.blur');
+export const toggleVisibleMenu = () => {
+  const listBtnNodeMenu = {
+    btnOpenMenu: "header__btn-menu",
+    btnCloseMenu: "menu__header-btn--close-menu",
+    backBlur: 'blur'
+  };
+  
+  const toggleMenu = (toggle) => {
+    const objectsMenu = {
+      menu: 'menu-open',
+      blur: 'blur-visible',
+      body: 'body__modal-open'
+    };
+
+    const btnNode = document.querySelector(`.${toggle}`);
+    if(btnNode !== null) {
+      for(let key in objectsMenu) {
+        let el = document.querySelector(`.${key}`);
+        btnNode.addEventListener('click', () => {
+          if(!el.classList.contains(`${objectsMenu[key]}`)) {
+            el.classList.add(`${objectsMenu[key]}`);
+          } else {
+            el.classList.remove(`${objectsMenu[key]}`);
+          }
+          
+        });
+
+        btnNode.addEventListener('keydown', (e) => {
+          if(e.key === 'Escape') {
+            if(el.classList.contains(`${objectsMenu[key]}`)) {
+              el.classList.remove(`${objectsMenu[key]}`);
+            }
+          }
+        });
+      }
+    }
+    
+    const blur = document.querySelector('.blur');
+    const menu = document.querySelector('.menu');
+    blur.addEventListener('click', () => {
+      if (menu.classList.contains('menu-open')) {
+        menu.classList.remove('menu-open');
+      }
+    })
+  }
 
 
-//Открытие меню на кнопку
-btnOpenMenu.addEventListener('click', () => {
-  menu.classList.add('menu-open');
-  blur.classList.add('blur-visible');
-  body.classList.add('body__modal-open');
-});
-
-//Закрытие меню на кнопку
-btnCloseMenu.addEventListener('click', () => {
-  menu.classList.remove('menu-open');
-  blur.classList.remove('blur-visible');
-  body.classList.remove('body__modal-open');
-})
-
-//Закрытие меню на заблюренную область
-blur.addEventListener('click', () => {
-  menu.classList.remove('menu-open');
-  blur.classList.remove('blur-visible');
-  body.classList.remove('body__modal-open');
-})
+  for(let key in listBtnNodeMenu) {
+    toggleMenu(listBtnNodeMenu[key]);
+  }
+};
 

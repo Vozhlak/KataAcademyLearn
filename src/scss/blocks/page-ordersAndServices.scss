@@ -1,0 +1,35 @@
+
+
+
+.blur-visible {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background-color: #FFF;
+  opacity: 0.96;
+  overflow-y: hidden;
+}
+
+.form {
+  &__input,
+  &__textarea {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+  }
+
+  &__textarea {
+    height: 118px;
+    resize: none;
+  }
+}
+
+.note-desc-link {
+  text-decoration: none;
+  color: #FF3E79;
+}

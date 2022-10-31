@@ -30,6 +30,13 @@
 
   &__link-privacy-policy {
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #1B1C21;
+      transition: color 1s;
+      opacity: 1;
+    }
   }
 
   &__info-about-developer {

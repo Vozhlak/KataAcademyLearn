@@ -1,4 +1,4 @@
-.price-list {
+.prices {
   &__wrapper {
     padding: 0 0 0 16px;
     margin-bottom: 32px;
@@ -49,9 +49,8 @@
     @media(min-width: 768px) {
       width: auto;
       display: grid;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: 32px repeat(4, 1fr);
       background-color: $secondary-background;
-      border-radius: 6px;
       margin-bottom: 24px;
     }
     
@@ -62,6 +61,36 @@
 
   &__item {
     width: auto;
+
+    &-head,
+    &-head .prices-card {
+      background-color: $main-background;
+      border-bottom: none;
+      color: #7E7E82;
+      opacity: 0.72;
+      padding-top: 0;
+    }
+
+    &:first-child  {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+
+    &:nth-child(2) {
+      border-radius: 6px 6px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 6px 6px;
+    }
+
+    &:last-child .prices-card {
+      border-bottom: none;
+    }
+    
     
     @media (min-width: 768px) {
       margin-right: 0 !important;
@@ -70,26 +99,6 @@
 
     @media (min-width: 1120px) {
       padding: 0 24px;
-    }
-  }
-
-  &__head-list--notVisible {
-    display: none;
-    @media (min-width: 768px) {
-      display: grid;
-      width: auto;
-      justify-content: space-between;
-      grid-template-columns: 348px 74px 81px 160px;
-      column-gap: 24px;
-      padding-left: 16px;
-      margin-bottom: 16px;
-      color: #7E7E82;
-      opacity: 0.72;
-      
-      @media (min-width: 1120px) {
-        width: auto;
-        padding-left: 24px;
-      }
     }
   }
 
@@ -127,6 +136,12 @@
         height: 12px;
         margin-left: 9px;
         vertical-align: middle;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: .7;
+        transition: opacity 1s;
       }
     }
   }
